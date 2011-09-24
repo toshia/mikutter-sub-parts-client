@@ -10,9 +10,9 @@ mikutter.rbがあるディレクトリにある plugin/ 以下か、 ~/.mikutter
 
 ** 例
 - plugin/
--- sub_parts_client
---- README
---- sub_parts_client.rb
+  - sub_parts_client
+    - README
+    - sub_parts_client.rb
 
 * 使いかた
 普通にこれで起動したらもう表示されてるでしょ
