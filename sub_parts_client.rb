@@ -3,6 +3,7 @@ miquire :mui, 'sub_parts_helper'
 
 require 'gtk2'
 require 'cairo'
+require 'cgi'
 
 # ツイートが投稿されるのに使われたクライアントアプリケーションの名前をTL上に表示する
 class Gdk::SubPartsClient < Gdk::SubParts
@@ -37,7 +38,7 @@ class Gdk::SubPartsClient < Gdk::SubParts
     layout.font_description = Pango::FontDescription.new(UserConfig[:mumble_basic_font])
     layout.alignment = Pango::ALIGN_RIGHT
     if(message[:source])
-      layout.text = 'via '+message[:source].gsub(/<.*?>/, '')
+      layout.text = 'via '+CGI.unescapeHTML(message[:source]).gsub(/<.*?>/, '')
     else
       layout.text = '' end
     layout end
