@@ -4,18 +4,16 @@ sub parts client
 mikutterで、各ツイートにクライアント名を表示する奴です。via mikutterとか、投稿に使ったクライアントが分かります
 
 * インストール方法
-まず、mikutterのバージョンが 0.0.4.517以降である必要があります。じゃないとこれと言って何も起こらないか起動しません。
-mikutter.rbがあるディレクトリにある plugin/ 以下か、 ~/.mikutter/plugin を作って、その中にこのプラグインを突っ込みます。
-ディレクトリ名とrubyスクリプトのファイル名は同じにしましょう
+mikutter 0.2.2 以上をインストールしてください。
+次に、以下のコマンドをターミナルで実行し、mikutterを再起動してください。
 
-** 例
-- plugin/
-  - sub_parts_client
-    - README
-    - sub_parts_client.rb
+: $ mkdir -p ~/.mikutter/plugin
+: $ cd ~/.mikutter/plugin
+: $ git clone git://github.com/toshia/mikutter-sub-parts-client.git sub-parts-client
 
 * 使いかた
-普通にこれで起動したらもう表示されてるでしょ
+起動したら各ツイートの下に「via (Twitterクライアント名)」と表示されます。
+また、システムメッセージの場合は、「by (プラグイン名)」になります。
 
 * カスタマイズ
 なんか魔改造したらぜひ
