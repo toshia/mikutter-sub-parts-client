@@ -28,8 +28,7 @@ Plugin.create :sub_parts_client do
           context.show_pango_layout(layout) } end end
 
     def height
-      main_message.size[1] / Pango::SCALE end
-    memoize :height
+      @height ||= main_message.size[1] / Pango::SCALE end
 
     private
 
