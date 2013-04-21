@@ -23,7 +23,7 @@ Plugin.create :sub_parts_client do
       if helper.visible? and message
         context.save{
           layout = main_message(context)
-          context.translate(width - (layout.size[0] / Pango::SCALE) - @margin, 0)
+          context.translate(width - (layout.size[0] / Pango::SCALE) - @margin*2, 0)
           context.set_source_rgb(*(UserConfig[:mumble_basic_color] || [0,0,0]).map{ |c| c.to_f / 65536 })
           context.show_pango_layout(layout) } end end
 
