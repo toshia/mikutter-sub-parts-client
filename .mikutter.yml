@@ -1,7 +1,7 @@
 ---
 slug: :sub_parts_client
 depends:
-  mikutter: 0.2.2.1211
+  mikutter: "3.0.0"
   plugin:
   - gtk
 version: '1.1'

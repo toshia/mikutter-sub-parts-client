@@ -4,7 +4,7 @@ sub parts client
 mikutterで、各ツイートにクライアント名を表示する奴です。via mikutterとか、投稿に使ったクライアントが分かります
 
 * インストール方法
-mikutter 0.2.2 以上をインストールしてください。
+mikutter 3.0 以上をインストールしてください。
 次に、以下のコマンドをターミナルで実行し、mikutterを再起動してください。
 
 : $ mkdir -p ~/.mikutter/plugin
