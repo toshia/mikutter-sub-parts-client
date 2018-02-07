@@ -35,7 +35,7 @@ Plugin.create :sub_parts_client do
     def main_message(context = dummy_context)
       layout = context.create_pango_layout
       layout.font_description = Pango::FontDescription.new(UserConfig[:mumble_basic_font])
-      layout.alignment = Pango::ALIGN_RIGHT
+      layout.alignment = Pango::Alignment::RIGHT
       if(message[:source])
         layout.text = (message[:system] ? "by" : "via") + ' ' + message[:source]
       else
