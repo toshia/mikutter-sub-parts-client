@@ -24,7 +24,7 @@ Plugin.create :sub_parts_client do
         context.save{
           layout = main_message(context)
           context.translate(width - (layout.size[0] / Pango::SCALE) - @margin*2, 0)
-          context.set_source_rgb(*(UserConfig[:mumble_basic_color] || [0,0,0]).map{ |c| c.to_f / 65536 })
+          context.set_source_rgb(*(UserConfig[:twitter_tweet_basic_color] || [0,0,0]).map{ |c| c.to_f / 65536 })
           context.show_pango_layout(layout) } end end
 
     def height
@@ -34,7 +34,7 @@ Plugin.create :sub_parts_client do
 
     def main_message(context = dummy_context)
       layout = context.create_pango_layout
-      layout.font_description = Pango::FontDescription.new(UserConfig[:mumble_basic_font])
+      layout.font_description = Pango::FontDescription.new(UserConfig[:twitter_tweet_basic_font])
       layout.alignment = Pango::Alignment::RIGHT
       if(message[:source])
         layout.text = (message[:system] ? "by" : "via") + ' ' + message[:source]
