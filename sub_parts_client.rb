@@ -7,7 +7,7 @@ require 'cairo'
 Plugin.create :sub_parts_client do
   # ツイートが投稿されるのに使われたクライアントアプリケーションの名前をTL上に表示する
   class Gdk::SubPartsClient < Gdk::SubParts
-    regist
+    register
 
     def initialize(*args)
       super
@@ -32,7 +32,7 @@ Plugin.create :sub_parts_client do
 
     private
 
-    def main_message(context = dummy_context)
+    def main_message(context = Cairo::Context.dummy)
       layout = context.create_pango_layout
       layout.font_description = Pango::FontDescription.new(UserConfig[:twitter_tweet_basic_font])
       layout.alignment = Pango::Alignment::RIGHT
