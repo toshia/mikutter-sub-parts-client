@@ -11,7 +11,7 @@ Plugin.create :sub_parts_client do
 
     def initialize(*args)
       super
-      @margin = 2
+      @margin = Gdk.scale(2)
       if message and not helper.visible?
         sid = helper.ssc(:expose_event, helper){
           helper.on_modify
@@ -34,7 +34,7 @@ Plugin.create :sub_parts_client do
 
     def main_message(context = Cairo::Context.dummy)
       layout = context.create_pango_layout
-      layout.font_description = Pango::FontDescription.new(UserConfig[:twitter_tweet_basic_font])
+      layout.font_description = helper.font_description(UserConfig[:twitter_tweet_basic_font])
       layout.alignment = Pango::Alignment::RIGHT
       if(message[:source])
         layout.text = (message[:system] ? "by" : "via") + ' ' + message[:source]
