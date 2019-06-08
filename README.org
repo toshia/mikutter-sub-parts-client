@@ -1,10 +1,10 @@
 sub parts client
 
 * これなん
-mikutterで、各ツイートにクライアント名を表示する奴です。via mikutterとか、投稿に使ったクライアントが分かります
+mikutterで、各Message（ツイートやトゥート）にクライアント名を表示する奴です。via mikutterとか、投稿に使ったクライアントが分かります。
 
 * インストール方法
-mikutter 3.0 以上をインストールしてください。
+mikutter 3.9 以上をインストールしてください。
 次に、以下のコマンドをターミナルで実行し、mikutterを再起動してください。
 
 : $ mkdir -p ~/.mikutter/plugin
@@ -12,7 +12,7 @@ mikutter 3.0 以上をインストールしてください。
 : $ git clone git://github.com/toshia/mikutter-sub-parts-client.git sub_parts_client
 
 * 使いかた
-起動したら各ツイートの下に「via (Twitterクライアント名)」と表示されます。
+起動したら各Messageの下に「via (Twitterクライアント名)」と表示されます。
 また、システムメッセージの場合は、「by (プラグイン名)」になります。
 
 * カスタマイズ
