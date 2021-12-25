@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-require 'gtk2'
+require 'gtk3'
 require 'cairo'
 
 Plugin.create :sub_parts_client do
