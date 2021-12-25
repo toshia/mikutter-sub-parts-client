@@ -1,9 +1,9 @@
 ---
 slug: :sub_parts_client
 depends:
-  mikutter: "3.9.0"
+  mikutter: "5.0.0"
   plugin:
-  - gtk
+  - gtk3
 version: '2.0'
 author: toshi_a
 name: subparts client
